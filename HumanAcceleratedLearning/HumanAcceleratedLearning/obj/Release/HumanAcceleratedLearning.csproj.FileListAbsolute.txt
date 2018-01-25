@@ -1,0 +1,127 @@
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe.config
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.pdb
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.dll
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.dll
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.dll
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.xml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.pdb
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.xml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.pdb
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.xml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.g.cs
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.g.cs
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.g.cs
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\App.g.cs
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.cache
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.lref
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.baml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.baml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.baml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.g.resources
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.Properties.Resources.resources
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csproj.GenerateResource.Cache
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.exe
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.pdb
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.g.cs
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.dll
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.pdb
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.xml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.baml
+C:\Users\dtp110020\Documents\Visual Studio 2015\Projects\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csprojResolveAssemblyReference.cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe.config
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.exe
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.pdb
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe.config
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.exe
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.pdb
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csprojResolveAssemblyReference.cache
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.g.cs
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.g.cs
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.g.cs
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.g.cs
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\App.g.cs
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.cache
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.lref
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.pdb
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.dll
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.dll
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.dll
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.dll
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.pdb
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.xml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.xml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.pdb
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.xml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.pdb
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.xml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.baml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.baml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.baml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.baml
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.g.resources
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.Properties.Resources.resources
+C:\Users\PTSD\Documents\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csproj.GenerateResource.Cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csprojResolveAssemblyReference.cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\App.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.lref
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.g.resources
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.Properties.Resources.resources
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csproj.GenerateResource.Cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe.config
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.exe
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.dll
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\GongSolutions.Wpf.DragDrop.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\NAudio.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.pdb
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\OxyPlot.Wpf.xml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\App.g.cs
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning_MarkupCompile.lref
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\AudioDeviceSelectionWindow.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\DebuggingView.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\MainWindow.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\SessionWindow.baml
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.g.resources
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.Properties.Resources.resources
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csproj.GenerateResource.Cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Visual Studio\V2 - 2017_05_02\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.csprojResolveAssemblyReference.cache
+Z:\TBI\Behavior Code\Human Accelerated Learning\Current Version\HumanAcceleratedLearning\HumanAcceleratedLearning\bin\Release\HumanAcceleratedLearning.exe.config
+Z:\TBI\Behavior Code\Human Accelerated Learning\Current Version\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.exe
+Z:\TBI\Behavior Code\Human Accelerated Learning\Current Version\HumanAcceleratedLearning\HumanAcceleratedLearning\obj\Release\HumanAcceleratedLearning.pdb
