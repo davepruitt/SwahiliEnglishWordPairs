@@ -64,10 +64,14 @@ namespace HumanAcceleratedLearning
             new Stage() { StageName = "Control Subject - First Visit" },
             new Stage() { StageName = "Test Only" }
         };
-        
+
         #endregion
 
         #region Public properties
+
+        public int WordCount_Paired = 25;
+        public int WordCount_Interleaved = 25;
+        public int WordCount_Unpaired = 25;
 
         public float TotalWordGroups = 1.0f;
 
@@ -356,6 +360,30 @@ namespace HumanAcceleratedLearning
                     {
                         string p_trimmed = p.Trim();
                         HumanAcceleratedLearningConfiguration.GetInstance().ExcludedSwahiliWords.Add(p_trimmed);
+                    }
+                }
+                else if (key.Equals("Word Count Paired", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    success = Int32.TryParse(value, out result);
+                    if (success)
+                    {
+                        HumanAcceleratedLearningConfiguration.GetInstance().WordCount_Paired = result;
+                    }
+                }
+                else if (key.Equals("Word Count Interleaved", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    success = Int32.TryParse(value, out result);
+                    if (success)
+                    {
+                        HumanAcceleratedLearningConfiguration.GetInstance().WordCount_Interleaved = result;
+                    }
+                }
+                else if (key.Equals("Word Count Unpaired", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    success = Int32.TryParse(value, out result);
+                    if (success)
+                    {
+                        HumanAcceleratedLearningConfiguration.GetInstance().WordCount_Unpaired = result;
                     }
                 }
             }

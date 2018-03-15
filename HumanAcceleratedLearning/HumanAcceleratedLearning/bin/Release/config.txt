@@ -7,3 +7,6 @@ Debug: 0													% A flag indicating whether to enable debugging features or
 Block Sequence: S, D, Tn                                    % Comma-separated list that describes what a single block contains.  Valid identifiers include S, D, T, Sn, Tn
 Block Count: 4                                              % The number of blocks that will be performed in a single session.
 Excluded Words: rafiki                                      % Words to be exluded from the list of swahili words
+Word Count Paired: 0
+Word Count Interleaved: 0
+Word Count Unpaired: 2

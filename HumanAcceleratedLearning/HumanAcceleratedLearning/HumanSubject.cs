@@ -47,9 +47,9 @@ namespace HumanAcceleratedLearning
             //int total_p = selected_stage.StageSequence.Where(x => x.Item1 == WordGroup.PairedVNS).Count();
             //int total_u = selected_stage.StageSequence.Where(x => x.Item1 == WordGroup.InterleavedVNS).Count();
             //int total_n = selected_stage.StageSequence.Where(x => x.Item1 == WordGroup.NoVNS).Count();
-            int total_p = 25;
-            int total_u = 25;
-            int total_n = 25;
+            int total_p = HumanAcceleratedLearningConfiguration.GetInstance().WordCount_Paired;
+            int total_u = HumanAcceleratedLearningConfiguration.GetInstance().WordCount_Interleaved;
+            int total_n = HumanAcceleratedLearningConfiguration.GetInstance().WordCount_Unpaired;
 
             List<int> sorted_list = new List<int>();
             var p_list = Enumerable.Repeat((int)WordGroup.PairedVNS, total_p).ToList();
