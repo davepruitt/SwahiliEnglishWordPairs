@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HumanAcceleratedLearning.Helpers;
 
 namespace HumanAcceleratedLearning
 {
@@ -40,20 +41,21 @@ namespace HumanAcceleratedLearning
         /// <summary>
         /// Writes a study trial to the file
         /// </summary>
-        public static void WriteStudyTrial (StreamWriter fid, int word_pair_id, int word_group_id, int desired_word_group_id, DateTime time_presented)
+        public static void WriteStudyTrial (StreamWriter fid, string foreign_language_word, string english_word, DateTime time_presented)
         {
             double matlab_time = MathHelperMethods.ConvertDateTimeToMatlabDatenum(time_presented);
-            fid.WriteLine(word_pair_id.ToString() + ", " + word_group_id.ToString() + ", " + desired_word_group_id.ToString() 
-                + ", " + matlab_time.ToString());
+            fid.WriteLine(foreign_language_word.ToString() + ", " + english_word.ToString() + ", " + matlab_time.ToString());
+            fid.Flush();
         }
 
         /// <summary>
-        /// Writes to the study file when a tone occurs
+        /// Writes a study trial for the object location to the file
         /// </summary>
-        public static void WriteStudyTone (StreamWriter fid, DateTime tone_timestamp)
+        public static void WriteObjectLocationStudyTrial (StreamWriter fid, string image_name, double xpos, double ypos, DateTime time_presented)
         {
-            double matlab_time = MathHelperMethods.ConvertDateTimeToMatlabDatenum(tone_timestamp);
-            fid.WriteLine("TONE, " + matlab_time.ToString());
+            double matlab_time = MathHelperMethods.ConvertDateTimeToMatlabDatenum(time_presented);
+            fid.WriteLine("OBJECT, " + image_name + ", " + xpos.ToString("0.##") + ", " + ypos.ToString("0.##") + ", " + matlab_time.ToString());
+            fid.Flush();
         }
 
         #endregion

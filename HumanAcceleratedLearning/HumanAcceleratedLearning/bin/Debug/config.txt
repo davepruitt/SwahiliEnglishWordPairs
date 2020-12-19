@@ -1,9 +1,0 @@
-Primary Save Path: C:\Swahili English Data\					% This is the primary location where data will be saved
-Study Session Stage Path: Stages
-Time From Tone To VNS: 5000									% This is the amount of time between when we detect a tone and when VNS will occur for the patient
-VNS Presentation Delay: -2000								% This is the delay from when VNS occurs to when we want to display the word-pair associated with VNS
-Testing Time: 8000											% This is the standard amount of time that users have to respond during the testing phase
-Debug: 0													% A flag indicating whether to enable debugging features or not (values of 1 and 0 are valid)
-Block Sequence: S, D, Tn                                    % Comma-separated list that describes what a single block contains.  Valid identifiers include S, D, T, Sn, Tn
-Block Count: 4                                              % The number of blocks that will be performed in a single session.
-Excluded Words: rafiki                                      % Words to be exluded from the list of swahili words

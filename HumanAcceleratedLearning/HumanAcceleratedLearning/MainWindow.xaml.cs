@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HumanAcceleratedLearning.Models;
+using HumanAcceleratedLearning.Views;
 
 namespace HumanAcceleratedLearning
 {
@@ -26,37 +28,57 @@ namespace HumanAcceleratedLearning
             InitializeComponent();
 
             //Load in configuration data
-            HumanAcceleratedLearningConfiguration.GetInstance().LoadConfigurationFile();
+            HumanAcceleratedLearningConfiguration.GetInstance();
+            HumanAcceleratedLearningConfiguration.GetInstance().LoadAllStages();
+            HumanAcceleratedLearningConfiguration.GetInstance().LoadLanguageDictionaries();
 
-            //Load in the Swahili/English dictionary
-            HumanAcceleratedLearningConfiguration.GetInstance().LoadDictionary();
+            //Determine whether to maximize the window or not
+            double w = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double h = System.Windows.SystemParameters.PrimaryScreenHeight;
+            if (w >= (h * 2))
+            {
+                this.WindowState = WindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = WindowState.Maximized;
+            }
 
-            //Allow the user to select an audio device
-            AudioDeviceSelectionWindow audio_device_selection_window = new AudioDeviceSelectionWindow();
-            audio_device_selection_window.ShowDialog();
-
-            //Initialize the audio recording
-            TAPSAudioListener.GetInstance();
-
-            DataContext = new SetupScreenViewModel();
+            //Set up the UI
+            Initialize_UserInterface();
         }
 
-        private void UsernameTextBox_KeyUp(object sender, KeyEventArgs e)
+        private void Initialize_UserInterface()
         {
-            if (e.Key == Key.Enter)
-            {
-                BindingExpression exp = UsernameTextBox.GetBindingExpression(TextBox.TextProperty);
-                exp.UpdateSource();
-            }
+            //Create the setup session view
+            Screen_NewSessionInformation new_session_ui = new Screen_NewSessionInformation();
+            new_session_ui.PropertyChanged += Handle_NewSessionInformation_Result;
+            MainWindowContentRegion.Children.Add(new_session_ui);
+        }
+
+        private void Handle_NewSessionInformation_Result(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            //Clear the main window content region of its children
+            MainWindowContentRegion.Children.Clear();
+
+            //Display the UI piece in which we run the session
+            Screen_AdminPage admin_page_ui = new Screen_AdminPage();
+            MainWindowContentRegion.Children.Add(admin_page_ui);
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            var vm = this.DataContext as SetupScreenViewModel;
-            if (vm != null)
+            foreach (Window w in System.Windows.Application.Current.Windows)
             {
-                vm.StopSession();
+                if (w != this)
+                {
+                    w.Close();
+                }
             }
+
+            //Stop the session if need be
+            var model = SessionModel.GetInstance();
+            model.StopSession();
         }
     }
 }

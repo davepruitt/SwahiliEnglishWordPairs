@@ -14,6 +14,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +54,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,43 +77,78 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AudioDeviceSelectionViewModel.cs" />
-    <Compile Include="AudioDeviceSelectionWindow.xaml.cs">
-      <DependentUpon>AudioDeviceSelectionWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AudioDeviceViewModel.cs" />
-    <Compile Include="BlockPiece.cs" />
-    <Compile Include="BlockPieceConverter.cs" />
-    <Compile Include="ConfigurationFileLoader.cs" />
-    <Compile Include="DebuggingView.xaml.cs">
-      <DependentUpon>DebuggingView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DebuggingViewModel.cs" />
+    <Compile Include="Converters\LanguageClassificationConverter.cs" />
+    <Compile Include="Converters\PhaseTypeConverter.cs" />
+    <Compile Include="Helpers\ConfigurationFileLoader.cs" />
     <Compile Include="HumanAcceleratedLearningConfiguration.cs" />
-    <Compile Include="HumanSubject.cs" />
-    <Compile Include="MathHelperMethods.cs" />
-    <Compile Include="ReactToModelPropertyChanged.cs" />
-    <Compile Include="SessionWindow.xaml.cs">
-      <DependentUpon>SessionWindow.xaml</DependentUpon>
+    <Compile Include="Models\HumanSubject.cs" />
+    <Compile Include="Helpers\MathHelperMethods.cs" />
+    <Compile Include="Models\LanguageClassification.cs" />
+    <Compile Include="Models\LanguageDictionary.cs" />
+    <Compile Include="Models\ObjectLocation_FileHandler.cs" />
+    <Compile Include="Models\Phase.cs" />
+    <Compile Include="Models\PhaseNode.cs" />
+    <Compile Include="Models\PhaseType.cs" />
+    <Compile Include="Models\Phase_Block.cs" />
+    <Compile Include="Models\Phase_Distraction.cs" />
+    <Compile Include="Models\Phase_Instructions.cs" />
+    <Compile Include="Models\Phase_ObjectLocationStudy.cs" />
+    <Compile Include="Models\Phase_ObjectLocationTest.cs" />
+    <Compile Include="Models\Phase_Study.cs" />
+    <Compile Include="Models\Phase_Test.cs" />
+    <Compile Include="Models\SessionModel.cs" />
+    <Compile Include="Models\Stage.cs" />
+    <Compile Include="Models\StageSegment.cs" />
+    <Compile Include="Models\TestClassification.cs" />
+    <Compile Include="Helpers\ReactToModelPropertyChanged.cs" />
+    <Compile Include="ParticipantWindow.xaml.cs">
+      <DependentUpon>ParticipantWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SetupScreenViewModel.cs" />
-    <Compile Include="SimpleCommand.cs" />
-    <Compile Include="Stage.cs" />
+    <Compile Include="Helpers\SimpleCommand.cs" />
     <Compile Include="StudyBlock.cs" />
-    <Compile Include="TAPSAudioListener.cs" />
     <Compile Include="TestBlock.cs" />
     <Compile Include="TestBlockTrial.cs" />
-    <Compile Include="ViewHelperMethods.cs" />
-    <Compile Include="WordGroup.cs" />
-    <Compile Include="WordGroupConverter.cs" />
-    <Page Include="AudioDeviceSelectionWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DebuggingView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="Helpers\ViewHelperMethods.cs" />
+    <Compile Include="TestBlockTrial_ObjectLocation.cs" />
+    <Compile Include="ViewModels\Screen_AdminPage_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_BlockNumber_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_Distraction_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_Instructions_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_NewSessionInformation_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_ObjectLocation_Study_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_ObjectLocation_Test_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_Study_ViewModel.cs" />
+    <Compile Include="ViewModels\Screen_Test_ViewModel.cs" />
+    <Compile Include="Views\Screen_AdminPage.xaml.cs">
+      <DependentUpon>Screen_AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_BlockNumber.xaml.cs">
+      <DependentUpon>Screen_BlockNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Closing.xaml.cs">
+      <DependentUpon>Screen_Closing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Distraction.xaml.cs">
+      <DependentUpon>Screen_Distraction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Instructions.xaml.cs">
+      <DependentUpon>Screen_Instructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_NewSessionInformation.xaml.cs">
+      <DependentUpon>Screen_NewSessionInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_ObjectLocation.xaml.cs">
+      <DependentUpon>Screen_ObjectLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Study.xaml.cs">
+      <DependentUpon>Screen_Study.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Test.xaml.cs">
+      <DependentUpon>Screen_Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Welcome.xaml.cs">
+      <DependentUpon>Screen_Welcome.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,15 +161,53 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SessionWindow.xaml">
+    <Page Include="ParticipantWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_BlockNumber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_Closing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_Distraction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_Instructions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_NewSessionInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_ObjectLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_Study.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Screen_Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SessionWindowViewModel.cs" />
-    <Compile Include="Model.cs" />
-    <Compile Include="NotifyPropertyChangedObject.cs" />
+    <Compile Include="Helpers\NotifyPropertyChangedObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -152,9 +231,217 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Resources\Dictionaries\japanese.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Dictionaries\swahili.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stages\example_stage.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructions\japanese_instructions_1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Instructions\japanese_instructions_2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Instructions\swahili_instructions_1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Instructions\swahili_instructions_2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GraphicsAssets\green_bar_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stages\example_stage_2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stages\example_stage_3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interference Images\AIRPLANEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\ANCHORpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\APPLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BANANApicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BASKETpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BEARpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BICYCLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BOTTLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BREADpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\BUSpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\CANDLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\car7.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\CARROTpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\CATpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\CHICKENpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\CLOCKpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\CRABpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\DOGpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\ELEPHANTpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\FROGpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\GLASSESpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\HAMMERpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\HELICOPTERpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\icecreamconepicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\KANGAROOpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\KETTLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\LADDERpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\LIGHTBULBpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\LOCKpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\MOTORCYCLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\MOUSEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\MUSHROOMpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\NAILpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\NUTpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\pearpicture.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\PINEAPPLEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\pizzapicture.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\PLIERSpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\pretzelpicture.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SAILBOATpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SAWpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SCISSORSpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SCREWDRIVERpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SKATEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SLEDpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\SQUIRRELpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\STOOLpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\TELEPHONEpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\TRUCKpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Interference Images\WRENCHpicture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stages\example_stage_4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructions\objectlocation_instructions_1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Instructions\objectlocation_instructions_2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

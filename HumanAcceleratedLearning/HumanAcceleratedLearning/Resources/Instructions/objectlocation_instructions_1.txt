@@ -1,0 +1,11 @@
+You will be presented with images that are located on a grid.
+Each image will appear for 5 seconds before being replaced by another image.  
+Please keep your eyes on the screen and focus on memorizing as many object-location pairings as possible.
+
+After this study session, we will begin with a testing session. 
+During testing, you will be presented with an image in the middle of your screen.
+Your task is to click on the image and drag it to the correct location (within the 8 seconds). 
+
+Try your best to remember and drag the image to the correct location as fast as you can.  You will not be penalized for incorrect answers. 
+
+Both the study and testing phases of this experiment will occur 3 times.

@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="HumanAcceleratedLearning.Views.Screen_NewSessionInformation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dd="urn:gong-wpf-dragdrop"
+             xmlns:local="clr-namespace:HumanAcceleratedLearning.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600">
+
+    <Border BorderBrush="#BCBCBC" BorderThickness="1">
+        <Grid Background="#FAFAFA">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0">
+                <Image Source="{StaticResource ResourceKey=GreenBar}" />
+                <TextBlock Text="Participant Information" 
+                           FontSize="18"
+                           FontFamily="Helvetica"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Margin="30,0"
+                           Foreground="White"
+                           />
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical"
+                            Grid.Row="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            >
+                    <TextBlock Text="Participant ID:"
+                               FontSize="18"
+                               FontFamily="Helvetica"
+                               Margin="0,0,0,5"
+                               />
+                    <TextBox Text="{Binding Path=SubjectIdentifier, Mode=TwoWay}"
+                             FontSize="18"
+                             FontFamily="Helvetica"
+                             Width="400"
+                             Height="35"
+                             VerticalContentAlignment="Center"
+                             Padding="2,0,0,0"
+                             GotKeyboardFocus="ParticpantID_TextBox_GotKeyboardFocus"
+                             Name="ParticpantID_TextBox"
+                             />
+                    <TextBlock Text="{Binding Path=ParticipantID_MessageText,FallbackValue=Sample Text}"
+                               FontSize="12"
+                               FontFamily="Helvetica"
+                               Width="400"
+                               Height="30"
+                               Margin="0,5,0,0"
+                               Foreground="Orange"
+                               TextWrapping="Wrap"
+                               />
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <TextBlock Text="Session Type:" FontSize="18" FontFamily="Helvetica" Margin="0,0,0,5" />
+                    <ComboBox Width="400" Height="35" SelectedIndex="{Binding Path=SessionTypeSelectedIndex, FallbackValue=0}"
+                              ItemsSource="{Binding Path=SessionTypeItemsList}"
+                              FontSize="18" FontFamily="Helvetica" VerticalContentAlignment="Center"
+                              />
+                    <TextBlock Text="{Binding Path=SessionType_MessageText,FallbackValue=Sample session description}"
+                               FontSize="12"
+                               FontFamily="Helvetica"
+                               Width="400"
+                               Height="55"
+                               Margin="0,5,0,0"
+                               Foreground="Orange"
+                               TextWrapping="Wrap"
+                               />
+
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Segment order (you may drag and drop): " 
+                               FontSize="18" FontFamily="Helvetica" Margin="0,0,0,5" Width="400"
+                               />
+                    <ListBox dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" 
+                             Width="400" Height="35" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                             ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                             ItemContainerStyle="{StaticResource ResourceKey=TxBDC_ListBox_Item}"
+                             ItemsSource="{Binding Path=SegmentNamesList}"
+                             >
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel IsItemsHost="True" />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                </StackPanel>
+
+                <Button Grid.Row="3"
+                        Style="{StaticResource ResourceKey=TxBDC_Button}"
+                        Content="NEXT"
+                        Width="100"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,40,0"
+                        Name="NextButton"
+                        Click="NextButton_Click"
+                        IsEnabled="{Binding Path=IsNextButtonEnabled, FallbackValue=False}"
+                        />
+
+            </Grid>
+
+        </Grid>
+    </Border>
+
+</UserControl>
+

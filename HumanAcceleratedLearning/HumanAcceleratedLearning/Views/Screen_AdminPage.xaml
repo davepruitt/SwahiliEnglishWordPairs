@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="HumanAcceleratedLearning.Views.Screen_AdminPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HumanAcceleratedLearning.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="670" d:DesignWidth="1280">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Image Source="{StaticResource ResourceKey=GreenBar}" Stretch="Fill" />
+            <TextBlock Text="{Binding Path=ParticipantIdentifier, FallbackValue=David Pruitt}" FontSize="36" FontFamily="Helvetica" VerticalAlignment="Center"
+                       HorizontalAlignment="Left" Margin="30,0,0,0" Foreground="White" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="120" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <TextBlock Text="Progress of current block" FontFamily="Helvetica" FontSize="48" HorizontalAlignment="Center" Margin="0,20,0,0" />
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding Path=CurrentBlockProgress, FallbackValue=0 / 1}" FontFamily="Helvetica" FontSize="96" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBlock Text="{Binding Path=CurrentWordPairText, FallbackValue=Current word pair}" FontFamily="Helvetica" FontSize="48" HorizontalAlignment="Center" Margin="0,20,0,0" />
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding Path=ForeignLanguageWord, FallbackValue=swahili}" FontFamily="Helvetica" FontSize="96" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=EnglishLanguageWord, FallbackValue=english}" FontFamily="Helvetica" 
+                                   FontSize="{Binding Path=EnglishLanguageWordFontSize, FallbackValue=96}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0">
+                    <TextBlock Text="Current block name: " FontFamily="Helvetica" FontSize="18" />
+                    <TextBlock Text="{Binding Path=CurrentBlockName, FallbackValue=Swahili}" FontFamily="Helvetica" FontSize="18" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                    <TextBlock Text="Remaining study blocks: " FontFamily="Helvetica" FontSize="18" />
+                    <TextBlock Text="{Binding Path=RemainingStudyBlockCount, FallbackValue=0}" FontFamily="Helvetica" FontSize="18" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+                    <TextBlock Text="Remaining test blocks: " FontFamily="Helvetica" FontSize="18" />
+                    <TextBlock Text="{Binding Path=RemainingTestBlockCount, FallbackValue=0}" FontFamily="Helvetica" FontSize="18" />
+                </StackPanel>
+            </Grid>
+
+            <Button Content="{Binding Path=AdminButtonContent, FallbackValue=Open participant window}" Height="80" Margin="20,20,20,10" FontSize="32" 
+                    Name="StartUserSessionButton" Style="{StaticResource ResourceKey=TxBDC_Button}"
+                    Click="StartUserSessionButton_Click" Grid.Row="2"
+                    IsEnabled="{Binding Path=IsMainButtonEnabled, FallbackValue=True}"
+                    />
+        </Grid>
+
+    </Grid>
+
+</UserControl>

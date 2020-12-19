@@ -1,0 +1,15 @@
+Stage Name: Japanese / Swahili (Visit 2)
+Stage Description: This stage contains Japanese and Swahili test blocks. You may choose which segment comes first.
+
+BEGIN STAGE
+
+segment, control = start, name = japanese
+	instructions, text = japanese_instructions_2.txt, duration = 15000
+	test, language = japanese, duration = 8000, type = full
+segment, control = end	
+	
+segment, control = start, name = swahili
+	instructions, text = swahili_instructions_2.txt, duration = 15000
+	test, language = swahili, duration = 8000, type = full
+segment, control = end	
+

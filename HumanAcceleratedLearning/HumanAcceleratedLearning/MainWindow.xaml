@@ -3,230 +3,69 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HumanAcceleratedLearning"
-        xmlns:oxy="http://oxyplot.org/wpf"
-        xmlns:dd="urn:gong-wpf-dragdrop"
         mc:Ignorable="d"
-        Title="Swahili Study Program" 
+        Title="TxBDC Learning and Memory Research Software" 
         Closed="Window_Closed"
-        Height="700" 
-        Width="850">
+        Height="838" Width="1280">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Vertical">
-
-            <Grid Margin="5">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Orientation="Horizontal"
-                            Margin="0,0,0,5"
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="2"
-                            HorizontalAlignment="Center"
-                            >
-
-                    <TextBlock Text="User name:" 
-                           FontSize="24"
-                           FontWeight="Bold"
-                           />
-                    <TextBox Text="{Binding Path=UserName, Mode=TwoWay}" 
-                             Margin="20,0,0,0"
-                             FontSize="24"
-                             Width="300"
-                             Name="UsernameTextBox"
-                             KeyUp="UsernameTextBox_KeyUp"
-                             IsEnabled="{Binding Path=UserChangesEnabled}"
-                             />
-                    <TextBlock Text="Stage:"
-                               FontSize="24"
-                               FontWeight="Bold"
-                               Margin="50,0,0,0"
-                               />
-                    <ComboBox Width="200"
-                              Margin="10,0,0,0"
-                              FontSize="24"
-                              ItemsSource="{Binding Path=StageNames}"
-                              SelectedIndex="{Binding Path=StageSelectedIndex, Mode=TwoWay}"
-                              IsEnabled="{Binding Path=UserChangesEnabled}"
-                              />
-
-                </StackPanel>
-
-
-                <Grid Grid.Column="0" Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="30" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Text="Block count: " 
-                               FontSize="18"
-                               Grid.Column="0"
-                               Grid.Row="0"
-                           />
-                    <TextBlock Text="Block order: " 
-                               FontSize="18"
-                               Grid.Column="0"
-                               Grid.Row="1"
-                           />
-
-                    <TextBlock Text="{Binding Path=BlockCount, FallbackValue=NaN}" 
-                               FontSize="18"
-                               Grid.Row="0"
-                               Grid.Column="1"
-                               />
-                    <TextBlock Text="{Binding Path=BlockSequence, FallbackValue=Unknown}" 
-                               FontSize="18"
-                               Grid.Row="1"
-                               Grid.Column="1"
-                               />
-
-                </Grid>
-
-                <Grid Grid.Column="1" Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="30" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Text="Current block: "
-                               FontSize="18"
-                               Grid.Column="0"
-                               Grid.Row="0"
-                           />
-                    <TextBlock Text="Current block segment: " 
-                               FontSize="18"
-                               Grid.Column="0"
-                               Grid.Row="1"
-                           />
-
-                    <TextBlock Text="{Binding Path=CurrentBlockNumber, FallbackValue=NaN}" 
-                               FontSize="18"
-                               Grid.Row="0"
-                               Grid.Column="1"
-                               />
-                    <TextBlock Text="{Binding Path=CurrentBlockSegment, FallbackValue=Unknown}"
-                               FontSize="18"
-                               Grid.Row="1"
-                               Grid.Column="1"
-                               />
-
-                </Grid>
-
-            </Grid>
+        <Grid Grid.Row="0" Background="#F7F7F7">
             
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+            <TextBlock Text="TxBDC Learning and Memory Research Software"
+                   FontSize="32"
+                   Foreground="#69BE28"
+                   Margin="30,15"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontFamily="Helvetica"
+                   />
+        </Grid>
 
-                <StackPanel Orientation="Vertical"
-                            Grid.Column="0"
-                            Visibility="Collapsed"
-                            >
-                    <TextBlock Text="Real-time audio signal" 
-                               FontSize="18" 
-                               HorizontalAlignment="Center"
-                               />
-                    
-                    <!-- OxyPlot WPF plot -->
-                    <oxy:PlotView MinHeight="250" 
-                          VerticalAlignment="Stretch" 
-                          HorizontalAlignment="Stretch" 
-                          Margin="10"
-                          Model="{Binding Path=Plot}" 
-                          />
-                    
-                </StackPanel>
+        <Grid Grid.Row="1">
 
-                <StackPanel Orientation="Vertical"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="2"
-                            >
-                    <TextBlock Text="Word group history" 
-                               FontSize="18" 
-                               HorizontalAlignment="Center"
-                               />
-                    <oxy:PlotView MinHeight="250" 
-                          VerticalAlignment="Stretch" 
-                          HorizontalAlignment="Stretch" 
-                          Margin="10"
-                          Model="{Binding Path=WordGroupsPlot}" />
+            <Rectangle Height="6" VerticalAlignment="Top">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FF777777" Offset="0.0" />
+                        <GradientStop Color="#00777777" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
 
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Center">
+            <Rectangle Height="6" VerticalAlignment="Bottom">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                        <GradientStop Color="#FF777777" Offset="0.0" />
+                        <GradientStop Color="#00777777" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
 
-                        <TextBlock Text="Sound Detected"
-                       Foreground="Green"
-                       Visibility="{Binding Path=SoundDetectedVisibility, FallbackValue=Visible}"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                                   Margin="100,0,100,0"
-                       />
-
-
-                        <TextBlock Text="{Binding Path=CurrentWordInformation, FallbackValue=Current Word Pair}" 
-                               HorizontalAlignment="Center" 
-                               FontSize="18"
-                                   Margin="0,0,100,0"
-                       />
-
-
-                    </StackPanel>
-                    
-                </StackPanel>
-
+            <Grid Name="MainWindowContentRegion" Panel.ZIndex="-1" Background="Transparent">
+                
+                <!-- Empty! This will be populated programmatically. -->
+                
             </Grid>
 
-            <TextBlock Text="{Binding Path=TimerText, FallbackValue=Timer}"
-                       FontSize="32"
-                       Margin="20,20,20,0"
-                       FontWeight="Bold"
-                       Foreground="{Binding Path=CurrentMessageColor}"
-                       HorizontalAlignment="Center"
-                       TextWrapping="Wrap"
-                       />
 
-            <TextBlock Text="{Binding Path=CurrentMessage, FallbackValue=Message}" 
-                       FontSize="32"
-                       Margin="20,0,20,0"
-                       FontWeight="Bold" 
-                       Foreground="{Binding Path=CurrentMessageColor}"
-                       HorizontalAlignment="Center"
-                       TextWrapping="Wrap"
-                       />
+        </Grid>
 
 
-            <Button Content="{Binding Path=AdminButtonContent, FallbackValue=Open user window}"
-                    Height="80"
-                    Margin="20,20,20,10"
-                    FontSize="32"
-                    Name="StartUserSessionButton"
-                    IsEnabled="{Binding Path=AdminButtonEnabled}"
-                    Command="{Binding Path=AdminButtonCommand}"
-                    />
-
-        </StackPanel>
-
+        <Grid Grid.Row="2" Background="#F7F7F7">
+            <StackPanel HorizontalAlignment="Center" 
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        Margin="0,8,0,0"
+                        >
+                <TextBlock Text="TEXAS " FontSize="18" FontWeight="Bold" VerticalAlignment="Center" FontFamily="Helvetica" />
+                <TextBlock Text="BIOMEDICAL DEVICE " FontSize="18" FontWeight="Bold" Foreground="#69BE28" VerticalAlignment="Center" FontFamily="Helvetica" />
+                <TextBlock Text="CENTER" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" FontFamily="Helvetica" />
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

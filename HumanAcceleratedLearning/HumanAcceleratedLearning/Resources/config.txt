@@ -1,0 +1,1 @@
+Primary Save Path: C:\Swahili English Data\					% This is the primary location where data will be saved

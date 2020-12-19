@@ -1,0 +1,11 @@
+You will be presented with pairings of English words and their Japanese translations.
+Each word pair will appear for 5 seconds
+Please keep your eyes on the screen and focus on memorizing as many word pairings as possible. 
+
+After this study session, we will begin with a testing session.
+During testing, you will be presented with a Japanese word.
+Your task is to type its correct English translation as quickly as possible (within the 8 seconds). 
+
+Try your best to remember and type in the English translation as fast as you can. You will not be penalized for incorrect answers.
+
+Both the study and testing phases of this experiment will occur 3 times, i.e. 3 blocks.

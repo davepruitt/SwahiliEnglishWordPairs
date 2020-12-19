@@ -1,0 +1,24 @@
+Stage Name: Japanese / Swahili (Visit 1)
+Stage Description: This stage includes both Japanese and Swahili study and test sessions. You may choose which segment comes first.
+
+BEGIN STAGE
+
+segment, control = start, name = japanese
+	instructions, text = japanese_instructions_1.txt, duration = 15000
+	loop, 3
+		block, number = n, duration = 5000
+		study, language = japanese, duration = 5000, spacing = 3000
+		distraction, duration = 30000
+		test, language = japanese, duration = 8000, type = partial
+	loop, end
+segment, control = end
+	
+segment, control = start, name = swahili
+	instructions, text = swahili_instructions_1.txt, duration = 15000
+	loop, 3
+		block, number = n, duration = 5000
+		study, language = swahili, duration = 5000, spacing = 3000
+		distraction, duration = 15000
+		test, language = swahili, duration = 8000, type = partial
+	loop, end
+segment, control = end

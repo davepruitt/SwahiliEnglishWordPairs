@@ -1,0 +1,25 @@
+Stage Name: Swahili with Object Location (Visit 1)
+Stage Description: This stage tests object locations.
+
+BEGIN STAGE
+
+segment, control = start, name = swahili
+	instructions, text = swahili_instructions_1.txt, duration = 15000
+	loop, 3
+		block, number = n, duration = 5000
+		study, language = swahili, duration = 5000
+		distraction, duration = 30000
+		test, language = swahili, duration = 8000, type = partial
+	loop, end
+segment, control = end
+
+segment, control = start, name = objectlocation
+	instructions, text = objectlocation_instructions_1.txt, duration = 15000
+	loop, 3
+		block, number = n, duration = 5000
+		objectlocation_study, duration = 5000
+        distraction, duration = 30000
+		objectlocation_test, duration = 8000
+	loop, end
+segment, control = end
+
