@@ -110,16 +110,25 @@ namespace HumanAcceleratedLearning
 
                 //Instantiate a new language dictionary object
                 LanguageDictionary d = new LanguageDictionary();
-                d.LanguageName = Path.GetFileNameWithoutExtension(f_info.Name);
-                if (d.LanguageName.Equals("swahili"))
+
+                string filename = Path.GetFileNameWithoutExtension(f_info.Name);
+                List<string> separated_parts = filename.Split(new char[] { '_' }).ToList();
+
+                d.ForeignLanguageName = separated_parts[0].ToLower();
+                if (separated_parts.Count >= 3)
                 {
-                    d.LanguageType = LanguageClassification.Swahili;
+                    d.NativeLanguageName = separated_parts[2].ToLower();
                 }
-                else if (d.LanguageName.Equals("japanese"))
+                else
                 {
-                    d.LanguageType = LanguageClassification.Japanese;
+                    d.NativeLanguageName = "english";
                 }
 
+                if (separated_parts.Count >= 4)
+                {
+                    d.MetaData = separated_parts[3].ToLower();
+                }
+                
                 //Load the dictionary file
                 List<string> file_lines = ConfigurationFileLoader.LoadConfigurationFile(f);
                 for (int i = 0; i < file_lines.Count; i++)

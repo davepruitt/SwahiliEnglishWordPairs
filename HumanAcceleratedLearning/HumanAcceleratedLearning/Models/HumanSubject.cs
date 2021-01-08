@@ -16,7 +16,7 @@ namespace HumanAcceleratedLearning.Models
         public DateTime StartDate = DateTime.MinValue;
         public Stage FirstVisitStage = null;
         public List<string> SegmentOrder = new List<string>();
-        public List<Tuple<LanguageClassification, List<string>>> CorrectlyAnsweredWordList = new List<Tuple<LanguageClassification, List<string>>>();
+        public Dictionary<string, List<string>> CorrectlyAnsweredWordList = new Dictionary<string, List<string>>();
         public List<string> AllObjectImages = new List<string>();
         public List<Tuple<int, int>> AllObjectImageLocations = new List<Tuple<int, int>>();
         public List<int> CorrectlyAnsweredImageList = new List<int>();
@@ -30,8 +30,19 @@ namespace HumanAcceleratedLearning.Models
         /// </summary>
         public HumanSubject ()
         {
-            CorrectlyAnsweredWordList.Add(new Tuple<LanguageClassification, List<string>>(LanguageClassification.Swahili, new List<string>()));
-            CorrectlyAnsweredWordList.Add(new Tuple<LanguageClassification, List<string>>(LanguageClassification.Japanese, new List<string>()));
+            //empty
+        }
+
+        #endregion
+
+        #region Methods
+
+        public void MakeSureCorrectlyAnsweredWordListExistsForSubject (string language_name)
+        {
+            if (!CorrectlyAnsweredWordList.Keys.Contains(language_name))
+            {
+                CorrectlyAnsweredWordList[language_name] = new List<string>();
+            }
         }
 
         #endregion

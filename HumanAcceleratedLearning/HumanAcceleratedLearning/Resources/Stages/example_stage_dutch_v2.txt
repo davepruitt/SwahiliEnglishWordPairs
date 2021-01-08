@@ -1,0 +1,10 @@
+Stage Name: Swahili for Dutch speakers (Visit 2)
+Stage Description: This stage contains Swahili test blocks for native Dutch speakers.
+
+BEGIN STAGE
+
+segment, control = start, name = swahili
+	instructions, text = dutch_instructions_2.txt, duration = 15000
+	test, foreign = swahili, native = dutch, duration = 8000, type = full
+segment, control = end	
+

@@ -45,9 +45,9 @@
                     <TextBlock Text="{Binding Path=CurrentWordPairText, FallbackValue=Current word pair}" FontFamily="Helvetica" FontSize="48" HorizontalAlignment="Center" Margin="0,20,0,0" />
 
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding Path=ForeignLanguageWord, FallbackValue=swahili}" FontFamily="Helvetica" FontSize="96" HorizontalAlignment="Center" />
-                        <TextBlock Text="{Binding Path=EnglishLanguageWord, FallbackValue=english}" FontFamily="Helvetica" 
-                                   FontSize="{Binding Path=EnglishLanguageWordFontSize, FallbackValue=96}" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=ForeignLanguageWord, FallbackValue=foreign}" FontFamily="Helvetica" FontSize="96" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=NativeLanguageWord, FallbackValue=native}" FontFamily="Helvetica" 
+                                   FontSize="{Binding Path=NativeLanguageWordFontSize, FallbackValue=96}" HorizontalAlignment="Center" />
                     </StackPanel>
                 </Grid>
             </Grid>

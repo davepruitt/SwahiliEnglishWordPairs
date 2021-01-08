@@ -43,14 +43,14 @@ namespace HumanAcceleratedLearning.ViewModels
         }
 
         [ReactToModelPropertyChanged(new string[] { "__new_frame__" })]
-        public string EnglishResponse
+        public string NativeResponse
         {
             get
             {
                 if (_model.CurrentPhase is Phase_Test)
                 {
                     var cp = _model.CurrentPhase as Phase_Test;
-                    return cp.CurrentEnglishLanguageResponse;
+                    return cp.CurrentNativeLanguageResponse;
                 }
 
                 return string.Empty;
@@ -60,7 +60,7 @@ namespace HumanAcceleratedLearning.ViewModels
                 if (_model.CurrentPhase is Phase_Test)
                 {
                     var cp = _model.CurrentPhase as Phase_Test;
-                    cp.CurrentEnglishLanguageResponse = value;
+                    cp.CurrentNativeLanguageResponse = value;
                 }
             }
         }

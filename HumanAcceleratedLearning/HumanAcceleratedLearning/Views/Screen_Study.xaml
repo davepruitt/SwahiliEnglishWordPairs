@@ -14,7 +14,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <TextBlock Text="{Binding Path=ForeignWord, FallbackValue=Swahili}"
+            <TextBlock Text="{Binding Path=ForeignWord, FallbackValue=Foreign}"
                            FontSize="72"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
@@ -23,7 +23,7 @@
                            />
             <Separator Grid.Row="1" 
                            />
-            <TextBlock Text="{Binding Path=EnglishWord, FallbackValue=English}"
+            <TextBlock Text="{Binding Path=NativeWord, FallbackValue=Native}"
                            FontSize="72"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"

@@ -41,10 +41,10 @@ namespace HumanAcceleratedLearning
         /// <summary>
         /// Writes a study trial to the file
         /// </summary>
-        public static void WriteStudyTrial (StreamWriter fid, string foreign_language_word, string english_word, DateTime time_presented)
+        public static void WriteStudyTrial (StreamWriter fid, string foreign_language_word, string native_word, DateTime time_presented)
         {
             double matlab_time = MathHelperMethods.ConvertDateTimeToMatlabDatenum(time_presented);
-            fid.WriteLine(foreign_language_word.ToString() + ", " + english_word.ToString() + ", " + matlab_time.ToString());
+            fid.WriteLine(foreign_language_word.ToString() + ", " + native_word.ToString() + ", " + matlab_time.ToString());
             fid.Flush();
         }
 

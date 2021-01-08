@@ -43,14 +43,14 @@ namespace HumanAcceleratedLearning.ViewModels
         }
 
         [ReactToModelPropertyChanged(new string[] { "__new_frame__" })]
-        public string EnglishWord
+        public string NativeWord
         {
             get
             {
                 if (_model.CurrentPhase is Phase_Study)
                 {
                     var cp = _model.CurrentPhase as Phase_Study;
-                    return cp.CurrentEnglishLanguageWord;
+                    return cp.CurrentNativeLanguageWord;
                 }
                 
                 return string.Empty;

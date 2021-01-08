@@ -22,15 +22,17 @@ namespace HumanAcceleratedLearning.Models
 
         #region Properties
 
-        public LanguageClassification Language { get; set; } = LanguageClassification.Undefined;
+        public string ForeignLanguage { get; set; } = string.Empty;
+
+        public string NativeLanguage { get; set; } = string.Empty;
 
         public TestClassification TestType { get; set; } = TestClassification.Undefined;
 
         public string CurrentForeignLanguageCue { get; set; } = string.Empty;
 
-        public string CurrentEnglishLanguageResponse { get; set; } = string.Empty;
+        public string CurrentNativeLanguageResponse { get; set; } = string.Empty;
 
-        public string CurrentEnglishLanguageCorrectAnswer { get; set; } = string.Empty;
+        public string CurrentNativeLanguageCorrectAnswer { get; set; } = string.Empty;
 
         public int CurrentPhase_NumberOfWordsCompleted
         {
@@ -81,13 +83,17 @@ namespace HumanAcceleratedLearning.Models
                 current_subject_obj = current_subject;
 
                 //Get the list of words to use for this test block
-                source_language_dictionary = HumanAcceleratedLearningConfiguration.GetInstance().LanguageDictionaries.Where(x => x.LanguageType == Language).FirstOrDefault();
+                var hal_config = HumanAcceleratedLearningConfiguration.GetInstance();
+                source_language_dictionary = hal_config.LanguageDictionaries.Where(x => 
+                    (x.ForeignLanguageName.Equals(ForeignLanguage) && 
+                    x.NativeLanguageName.Equals(NativeLanguage))
+                    ).FirstOrDefault();
 
                 //Get the list of words that this participant has already gotten correct in previous test blocks
-                var already_correct_words = current_subject.CorrectlyAnsweredWordList.Where(x => x.Item1 == Language).FirstOrDefault();
-                if (already_correct_words != null && source_language_dictionary != null)
+                current_subject.MakeSureCorrectlyAnsweredWordListExistsForSubject(ForeignLanguage);
+                if (source_language_dictionary != null)
                 {
-                    var correct_word_list = already_correct_words.Item2;
+                    var correct_word_list = current_subject.CorrectlyAnsweredWordList[ForeignLanguage];
                     var all_word_pairs = source_language_dictionary.DictionaryWordPairs.ToList();
                     var ordered_foreign_language_Words = all_word_pairs.Select(x => x.Item1).ToList();
 
@@ -123,9 +129,9 @@ namespace HumanAcceleratedLearning.Models
             {
                 if (!current_trial.Correct)
                 {
-                    if (CurrentEnglishLanguageResponse.ToLower().Equals(CurrentEnglishLanguageCorrectAnswer.ToLower()))
+                    if (CurrentNativeLanguageResponse.ToLower().Equals(CurrentNativeLanguageCorrectAnswer.ToLower()))
                     {
-                        current_trial.EnglishInput = CurrentEnglishLanguageResponse.ToLower();
+                        current_trial.NativeInput = CurrentNativeLanguageResponse.ToLower();
                         current_trial.Correct = true;
                         current_trial.InputLatency = (DateTime.Now - current_trial.PresentationTime).TotalSeconds;
                     }
@@ -141,14 +147,13 @@ namespace HumanAcceleratedLearning.Models
                     //If the participant didn't get this trial correct, note it as so.
                     if (!current_trial.Correct)
                     {
-                        current_trial.EnglishInput = CurrentEnglishLanguageResponse;
+                        current_trial.NativeInput = CurrentNativeLanguageResponse;
                         current_trial.InputLatency = TimeSpan.FromMilliseconds(Duration).TotalSeconds;
                     }
                     else
                     {
                         //Otherwise, make sure the list of "correctly answered words" includes this latest word
-                        var already_correct_words = current_subject_obj.CorrectlyAnsweredWordList.Where(x => x.Item1 == Language).FirstOrDefault();
-                        already_correct_words.Item2.Add(CurrentForeignLanguageCue);
+                        current_subject_obj.CorrectlyAnsweredWordList[ForeignLanguage].Add(CurrentForeignLanguageCue);
                     }
                     
                     //Write out this trial to a file
@@ -184,8 +189,8 @@ namespace HumanAcceleratedLearning.Models
                     //If we are not done yet...
                     //Grab the next word pair
                     CurrentForeignLanguageCue = shuffled_word_list[current_wordpair_index].Item1;
-                    CurrentEnglishLanguageCorrectAnswer = shuffled_word_list[current_wordpair_index].Item2;
-                    CurrentEnglishLanguageResponse = string.Empty;
+                    CurrentNativeLanguageCorrectAnswer = shuffled_word_list[current_wordpair_index].Item2;
+                    CurrentNativeLanguageResponse = string.Empty;
 
                     //Set the time for when this word pair was displayed
                     last_word_display_time = DateTime.Now;
@@ -216,14 +221,16 @@ namespace HumanAcceleratedLearning.Models
                 }
                 else if (pname.Equals("language"))
                 {
-                    if (pval.Equals("japanese"))
-                    {
-                        Language = LanguageClassification.Japanese;
-                    }
-                    else if (pval.Equals("swahili"))
-                    {
-                        Language = LanguageClassification.Swahili;
-                    }
+                    ForeignLanguage = pval.ToLower();
+                    NativeLanguage = "english";
+                }
+                else if (pname.Equals("foreign"))
+                {
+                    ForeignLanguage = pval.ToLower();
+                }
+                else if (pname.Equals("native"))
+                {
+                    NativeLanguage = pval.ToLower();
                 }
                 else if (pname.Equals("type"))
                 {

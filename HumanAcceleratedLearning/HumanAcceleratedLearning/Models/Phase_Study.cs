@@ -22,13 +22,15 @@ namespace HumanAcceleratedLearning.Models
 
         #region Properties
 
-        public LanguageClassification Language { get; set; } = LanguageClassification.Undefined;
+        public string ForeignLanguage { get; set; } = string.Empty;
+
+        public string NativeLanguage { get; set; } = string.Empty;
         
         public int Spacing { get; set; } = 0;
 
         public string CurrentForeignLanguageWord { get; set; } = string.Empty;
 
-        public string CurrentEnglishLanguageWord { get; set; } = string.Empty;
+        public string CurrentNativeLanguageWord { get; set; } = string.Empty;
 
         public int CurrentPhase_NumberOfWordsCompleted
         {
@@ -72,8 +74,12 @@ namespace HumanAcceleratedLearning.Models
             if (current_subject != null)
             {
                 //Get the list of words to use for this study block
-                var available_dictionaries = HumanAcceleratedLearningConfiguration.GetInstance().LanguageDictionaries;
-                source_language_dictionary = available_dictionaries.Where(x => x.LanguageType == Language).FirstOrDefault();
+                var hal_config = HumanAcceleratedLearningConfiguration.GetInstance();
+                var available_dictionaries = hal_config.LanguageDictionaries;
+                source_language_dictionary = available_dictionaries.Where(x => 
+                    x.ForeignLanguageName.Equals(ForeignLanguage) &&
+                    x.NativeLanguageName.Equals(NativeLanguage)
+                    ).FirstOrDefault();
 
                 //Shuffle the words
                 if (source_language_dictionary != null)
@@ -105,7 +111,7 @@ namespace HumanAcceleratedLearning.Models
             if (DateTime.Now >= (last_word_display_time + TimeSpan.FromMilliseconds(this.Duration)))
             {
                 CurrentForeignLanguageWord = string.Empty;
-                CurrentEnglishLanguageWord = string.Empty;
+                CurrentNativeLanguageWord = string.Empty;
             }
 
             if (DateTime.Now >= (last_word_display_time + TimeSpan.FromMilliseconds(this.Duration + this.Spacing)))
@@ -130,7 +136,7 @@ namespace HumanAcceleratedLearning.Models
                     //If we are not done yet...
                     //Grab the next word pair
                     CurrentForeignLanguageWord = shuffled_word_list[current_wordpair_index].Item1;
-                    CurrentEnglishLanguageWord = shuffled_word_list[current_wordpair_index].Item2;
+                    CurrentNativeLanguageWord = shuffled_word_list[current_wordpair_index].Item2;
 
                     //Set the time for when this word pair was displayed
                     last_word_display_time = DateTime.Now;
@@ -141,7 +147,7 @@ namespace HumanAcceleratedLearning.Models
                     //Save this trial
                     if (fid != null)
                     {
-                        StudyBlock.WriteStudyTrial(fid, CurrentForeignLanguageWord, CurrentEnglishLanguageWord, last_word_display_time);
+                        StudyBlock.WriteStudyTrial(fid, CurrentForeignLanguageWord, CurrentNativeLanguageWord, last_word_display_time);
                     }
                 }
             }
@@ -166,14 +172,16 @@ namespace HumanAcceleratedLearning.Models
                 }
                 else if (pname.Equals("language"))
                 {
-                    if (pval.Equals("japanese"))
-                    {
-                        Language = LanguageClassification.Japanese;
-                    }
-                    else if (pval.Equals("swahili"))
-                    {
-                        Language = LanguageClassification.Swahili;
-                    }
+                    ForeignLanguage = pval.ToLower();
+                    NativeLanguage = "english";
+                }
+                else if (pname.Equals("foreign"))
+                {
+                    ForeignLanguage = pval.ToLower();
+                }
+                else if (pname.Equals("native"))
+                {
+                    NativeLanguage = pval.ToLower();
                 }
             }
         }

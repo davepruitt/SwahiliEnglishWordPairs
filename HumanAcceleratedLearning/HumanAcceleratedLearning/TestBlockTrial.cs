@@ -13,7 +13,7 @@ namespace HumanAcceleratedLearning
         #region Public data members
         
         public string ForeignWord = string.Empty;
-        public string EnglishInput = string.Empty;
+        public string NativeInput = string.Empty;
         public bool Correct = false;
         public DateTime PresentationTime = DateTime.MinValue;
         public double InputLatency = double.NaN;
@@ -34,7 +34,7 @@ namespace HumanAcceleratedLearning
         public static void WriteTestBlockTrial ( StreamWriter fid, TestBlockTrial t )
         {
             double matlab_time_presented = MathHelperMethods.ConvertDateTimeToMatlabDatenum(t.PresentationTime);
-            fid.WriteLine(t.ForeignWord + ", " + t.EnglishInput + ", " + t.Correct.ToString() + ", " + 
+            fid.WriteLine(t.ForeignWord + ", " + t.NativeInput + ", " + t.Correct.ToString() + ", " + 
                 matlab_time_presented.ToString() + ", " + t.InputLatency.ToString());
             fid.Flush();
         }

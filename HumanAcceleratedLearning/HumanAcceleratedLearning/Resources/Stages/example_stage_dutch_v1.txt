@@ -1,0 +1,14 @@
+Stage Name: Swahili for Dutch speakers (Visit 1)
+Stage Description: This stage is for native Dutch speakers studying and testing against Swahili.
+
+BEGIN STAGE
+	
+segment, control = start, name = swahili
+	instructions, text = dutch_instructions_1.txt, duration = 15000
+	loop, 4
+		block, number = n, duration = 5000
+		study, foreign = swahili, native = dutch, duration = 5000, spacing = 3000
+		distraction, duration = 15000
+		test, foreign = swahili, native = dutch, duration = 8000, type = partial
+	loop, end
+segment, control = end

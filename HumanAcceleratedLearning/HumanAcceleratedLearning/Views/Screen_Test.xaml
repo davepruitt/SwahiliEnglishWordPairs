@@ -16,7 +16,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <TextBlock Text="{Binding Path=ForeignWord, FallbackValue=Swahili}"
+            <TextBlock Text="{Binding Path=ForeignWord, FallbackValue=Foreign}"
                            FontSize="72"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
@@ -28,13 +28,13 @@
                            />
 
             <!-- Foreground="{Binding Path=EnglishResponseColor, FallbackValue=Black}" -->
-            <TextBox Text="{Binding Path=EnglishResponse, UpdateSourceTrigger=PropertyChanged, FallbackValue=English}"
+            <TextBox Text="{Binding Path=NativeResponse, UpdateSourceTrigger=PropertyChanged, FallbackValue=Native}"
                          FontSize="72"
                          FontWeight="Bold"
                          HorizontalContentAlignment="Center"
                          VerticalContentAlignment="Center"
                          Grid.Row="2"
-                         Name="EnglishResponseTextBox"
+                         Name="NativeResponseTextBox"
                          Focusable="True"
                          />
 

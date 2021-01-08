@@ -79,19 +79,19 @@ namespace HumanAcceleratedLearning.ViewModels
         }
 
         [ReactToModelPropertyChanged(new string[] { "__new_frame__" })]
-        public string EnglishLanguageWord
+        public string NativeLanguageWord
         {
             get
             {
                 if (_model.CurrentPhase is Phase_Study)
                 {
                     var cp = _model.CurrentPhase as Phase_Study;
-                    return cp.CurrentEnglishLanguageWord;
+                    return cp.CurrentNativeLanguageWord;
                 }
                 else if (_model.CurrentPhase is Phase_Test)
                 {
                     var cp = _model.CurrentPhase as Phase_Test;
-                    return cp.CurrentEnglishLanguageCorrectAnswer;
+                    return cp.CurrentNativeLanguageCorrectAnswer;
                 }
                 else if (_model.CurrentPhase is Phase_ObjectLocationStudy)
                 {
@@ -107,7 +107,7 @@ namespace HumanAcceleratedLearning.ViewModels
         }
 
         [ReactToModelPropertyChanged(new string[] { "__new_frame__" })]
-        public int EnglishLanguageWordFontSize
+        public int NativeLanguageWordFontSize
         {
             get
             {
@@ -182,11 +182,11 @@ namespace HumanAcceleratedLearning.ViewModels
 
                     if (_model.CurrentPhase is Phase_Test)
                     {
-                        result += " - " + LanguageClassificationConverter.ConvertLanguageClassificationToDescription((_model.CurrentPhase as Phase_Test).Language);
+                        result += " - " + (_model.CurrentPhase as Phase_Test).ForeignLanguage.FirstCharToUpper();
                     }
                     else if (_model.CurrentPhase is Phase_Study)
                     {
-                        result += " - " + LanguageClassificationConverter.ConvertLanguageClassificationToDescription((_model.CurrentPhase as Phase_Study).Language);
+                        result += " - " + (_model.CurrentPhase as Phase_Study).ForeignLanguage.FirstCharToUpper();
                     }
                 }
 

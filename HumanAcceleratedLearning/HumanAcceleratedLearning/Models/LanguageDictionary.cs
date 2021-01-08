@@ -19,9 +19,11 @@ namespace HumanAcceleratedLearning.Models
 
         #region Properties
 
-        public LanguageClassification LanguageType { get; set; } = LanguageClassification.Undefined;
+        public string ForeignLanguageName { get; set; } = string.Empty;
 
-        public string LanguageName { get; set; } = string.Empty;
+        public string NativeLanguageName { get; set; } = string.Empty;
+
+        public string MetaData { get; set; } = string.Empty;
 
         public List<Tuple<string, string>> DictionaryWordPairs { get; set; } = new List<Tuple<string, string>>();
 

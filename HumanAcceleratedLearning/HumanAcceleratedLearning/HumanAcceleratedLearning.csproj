@@ -77,13 +77,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Converters\LanguageClassificationConverter.cs" />
     <Compile Include="Converters\PhaseTypeConverter.cs" />
     <Compile Include="Helpers\ConfigurationFileLoader.cs" />
+    <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="HumanAcceleratedLearningConfiguration.cs" />
     <Compile Include="Models\HumanSubject.cs" />
     <Compile Include="Helpers\MathHelperMethods.cs" />
-    <Compile Include="Models\LanguageClassification.cs" />
     <Compile Include="Models\LanguageDictionary.cs" />
     <Compile Include="Models\ObjectLocation_FileHandler.cs" />
     <Compile Include="Models\Phase.cs" />
@@ -231,17 +230,29 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Resources\Dictionaries\japanese.tsv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Dictionaries\swahili.tsv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Dictionaries\japanese_to_english_full.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Dictionaries\japanese_to_english_subset.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Dictionaries\swahili_to_dutch_full.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Dictionaries\swahili_to_dutch_subset.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Dictionaries\swahili_to_english_full.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Dictionaries\swahili_to_english_subset.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Stages\example_stage.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -442,6 +453,22 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Instructions\objectlocation_instructions_2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructions\dutch_instructions_1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Instructions\dutch_instructions_2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stages\example_stage_dutch_v1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Stages\example_stage_dutch_v2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

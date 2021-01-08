@@ -30,7 +30,7 @@ namespace HumanAcceleratedLearning.Views
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             //Give keyboard focus to the textbox when this user control is loaded
-            var result = Keyboard.Focus(EnglishResponseTextBox);
+            var result = Keyboard.Focus(NativeResponseTextBox);
         }
     }
 }
